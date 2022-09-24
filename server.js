@@ -26,8 +26,6 @@ app.get('/', (req, res) =>
   res.send('http get request sent to root api endpoint')
 );
 
-app.get('/api/', (req, res) => res.send('http get request sent to api'));
-
 /**
  * @route POST api/users
  * @desc Register user
