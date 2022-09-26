@@ -4,28 +4,30 @@ import axios from 'axios';
 
 class App extends React.Component {
   state = {
-    data:null
+    data: null
   }
 
-  componentDidMount(){
+  componentDidMount() {
     axios.get('http://localhost:5000')
-    .then((response) => {
-      this.setState({
-        data: response.data
+      .then((response) => {
+        this.setState({
+          data: response.data
+        })
       })
-    })
-    .catch((error) => {
-      console.error(`Error fetching data: ${error}`);
-    })
+      .catch((error) => {
+        console.error(`Error fetching data: ${error}`);
+      })
   }
+
   render() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       Project 1
-      </header>
-    </div>
-  );
+    return (
+      <div className="App">
+        <header className="App-header">
+          Project 1 This is coming from front end
+        </header>
+        {this.state.data}
+      </div>
+    );
   }
 }
 

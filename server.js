@@ -23,12 +23,15 @@ app.use(
  * @desc Test endpoint
  */
 app.get('/', (req, res) =>
-  res.send('http get request sent to root api endpoint')
+  res.send('This is coming from server side')
 );
+
+app.get('/api/', (req, res) => res.send('http get request sent to api'));
 
 /**
  * @route POST api/users
  * @desc Register user
+ * 
  */
 app.post(
   '/api/users',
